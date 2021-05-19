@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic else/if building block</title>
+    </head>
+    <body>
+        <h1>A basic JavaScript else if building block</h1>
+        <label for="temperature">Select the Current Temperature: </label>
+        <select id="temperature">
+            <option value="">Make a Choice</option>
+            <option value="hot">75+ degrees</option>
+            <option value="warm">65-75 degrees</option>
+            <option value="cold">65 degrees or less</option>
+        </select>
+        <p></p>
+    
+    <script>
+        const select = document.querySelector('select');
+        const para = document.querySelector('p');
+        select.onchange = setTemperature;
+        function setTemperature(){
+            const choice = select.value;
+            if (choice === 'hot') {
+                para.textContent = 'Today will be a Hot day. You should use the air conditioner to cool the house if you get too hot';
+            } else if (choice === 'warm') {
+                para.textContent = 'Today will be a nice warm day. Open the windows to cool the house if you get too warm';
+            } else if (choice === 'cold') {
+                para.textContent = 'Today will be a cool day. You can use the heater to warm the house if you get too cold';
+            } else {
+                para.textContent = '';
+            }
+        }
+    </script>
+    </body>
+</html>
