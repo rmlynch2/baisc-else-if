@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Basic else/if building block</title>
+        <title><em>Switch</em> vs. <em>Else if</em> Statements</title>
     </head>
     <body>
-        <h1>A basic JavaScript else if building block</h1>
+        <h1></h1>
         <label for="temperature">Select the Current Temperature: </label>
         <select id="temperature">
             <option value="">Make a Choice</option>
@@ -15,6 +15,8 @@
         <p></p>
     
     <script>
+        /* <-------Remove Comment Marks to Test else if 
+        
         const select = document.querySelector('select');
         const para = document.querySelector('p');
         select.onchange = setTemperature;
@@ -30,6 +32,32 @@
                 para.textContent = '';
             }
         }
+        Remove to test else if -------> */ 
+        
+        const select = document.querySelector('select');
+        const para = document.querySelector('p');
+        select.addEventListener('change', setTemperature);
+
+        function setTemperature() {
+            const choice = select.value;
+
+            switch ('choice') {
+                case 'hot':
+                    para.textContent = 'Today will be a Hot day. You should use the air conditioner to cool the house if you get too hot';
+                    break;
+                case 'warm':
+                    para.textContent = 'Today will be a nice warm day. Open the windows to cool the house if you get too warm';
+                    break;
+                case 'cold':
+                    para.textContent = 'Today will be a cool day. You can use the heater to warm the house if you get too cold';
+                    break;
+                default:
+                    para.textContent = '';
+            }
+
+        }
+
+   
     </script>
     </body>
 </html>
