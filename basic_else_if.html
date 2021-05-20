@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><em>Switch</em> vs. <em>Else if</em> Statements</title>
+        <title>Switch vs Else if</title>
     </head>
     <body>
-        <h1></h1>
+        <h1>Basic <em>Switch</em> vs. <em>Else if</em> Statements</h1>
         <label for="temperature">Select the Current Temperature: </label>
         <select id="temperature">
             <option value="">Make a Choice</option>
@@ -41,7 +41,7 @@
         function setTemperature() {
             const choice = select.value;
 
-            switch ('choice') {
+            switch (choice) {
                 case 'hot':
                     para.textContent = 'Today will be a Hot day. You should use the air conditioner to cool the house if you get too hot';
                     break;
